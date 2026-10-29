@@ -1,12 +1,67 @@
 default_agent = "principal"
+applied_migrations = [
+    "bash_read_only_defaults_v1",
+]
 
 [tools.bash]
 permission = "ask"
-allowlist = ["uv run", "ls", "git status", "git diff"]
+allowlist = [
+    "basename",
+    "cat",
+    "comm",
+    "cut",
+    "date",
+    "diff",
+    "dirname",
+    "du",
+    "file",
+    "find",
+    "fmt",
+    "fold",
+    "git diff",
+    "git status",
+    "grep",
+    "head",
+    "join",
+    "less",
+    "ls",
+    "md5sum",
+    "more",
+    "nl",
+    "od",
+    "paste",
+    "pwd",
+    "readlink",
+    "sha1sum",
+    "sha256sum",
+    "shasum",
+    "sort",
+    "stat",
+    "sum",
+    "tac",
+    "tail",
+    "tr",
+    "uname",
+    "uniq",
+    "uv run",
+    "wc",
+    "which",
+]
 
 [tools.write_file]
-denylist = ["*/results/*", "*/pie-baseline/*", "*/data/corpus/*", "*/data/tagsets/*", "*/data/prompt-templates/*"]
+denylist = [
+    "*/results/*",
+    "*/pie-baseline/*",
+    "*/data/corpus/*",
+    "*/data/tagsets/*",
+    "*/data/prompt-templates/*",
+]
 
 [tools.edit]
-denylist = ["*/results/*", "*/pie-baseline/*", "*/data/corpus/*", "*/data/tagsets/*", "*/data/prompt-templates/*"]
-
+denylist = [
+    "*/results/*",
+    "*/pie-baseline/*",
+    "*/data/corpus/*",
+    "*/data/tagsets/*",
+    "*/data/prompt-templates/*",
+]
