@@ -1,0 +1,12 @@
+default_agent = "principal"
+
+[tools.bash]
+permission = "ask"
+allowlist = ["uv run", "ls", "git status", "git diff"]
+
+[tools.write_file]
+denylist = ["*/results/*", "*/pie-baseline/*", "*/data/corpus/*", "*/data/tagsets/*", "*/data/prompt-templates/*"]
+
+[tools.edit]
+denylist = ["*/results/*", "*/pie-baseline/*", "*/data/corpus/*", "*/data/tagsets/*", "*/data/prompt-templates/*"]
+
